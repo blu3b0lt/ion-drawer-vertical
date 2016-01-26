@@ -178,6 +178,18 @@ $scope.toggleDrawer = function() {
 }
 ```
 
+
+## Change handle background based on state
+
+The icon or background of the handle can be modified based on the state of the slider uisng the `close-icon` and 'open-icon' attributes to `<ion-drawer-vertical-handle />` the values to these attributes is a link to the background.
+
+The arrow icon in the below images shows the direction to slide.
+
+![Demo of Dynamic change in handle](https://i.imgsafe.org/31b80de.png)
+
+![Demo of Dynamic change in handle](https://i.imgsafe.org/187c067.png)
+
+
 ## Acknowledgements
 
 [`ionic-contrib-drawer`](https://github.com/driftyco/ionic-ion-drawer) has been a source of inspiration / a starting point for `ion-drawer-vertical`.

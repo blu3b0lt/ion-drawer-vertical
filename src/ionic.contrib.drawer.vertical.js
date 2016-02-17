@@ -41,24 +41,23 @@
 
 		//Get handle background icons from handle element. NOTE: icons are specified as data URI
 
-		var $openIcon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAADDElEQVR4Xu2aMW4UURQE309JLRIC7oATIudEnIgIyTERMQkBN+AMFidACHEDjrBj+QhT0p+gu1Zytj3ari49J7PGTzWBVd3e8qMA5RIogAKUEyiv7wVQgHIC5fW9AApQTqC8vhdAAcoJlNf3AihAOYHy+l4ABSgnUF7fC6AA5QTK63sBFKCcQHl9L4AClBMor+8FUIByAuX1vQAKUE6gvL4XQAHKCZTX9wIoQDmB8vpeAAUoJ1Be3wugAOUEyut7ARSgnEB5fS+AApQTKK/vBVCAcgLl9b0AClBOoLy+F0ABygmU1/cCKEA5gfL6XgAFKCdQXv+qC3A3M+/KWZ+t/29m/p4Nnf3+VQJ8WGv9PPvjmr+/1nq83W6fdjNQgN2E4fPTBHg9M+8hi9bYn5n5vbv8VRdgdw+fDwkoAASXElOAlCVhDwWA4FJiCpCyJOyhABBcSkwBUpaEPRQAgkuJKUDKkrCHAkBwKTEFSFkS9lAACC4lpgApS8IeCgDBpcQUIGVJ2OMqAe7XWp/hb6yMHcfxY2a+7y5/lQC+EnZyybQ3gh7WWt9OMqj++nEcX2fmy24IV12A3T18PiSgABBcSkwBUpaEPRQAgkuJKUDKkrCHAkBwKTEFSFkS9lAACC4lpgApS8IeCgDBpcQUIGVJ2EMBILiUmAKkLAl7KAAElxJTgJQlYY+rBHg1M2/gb2yN/Z+Zl7+tn6sE8I2gkzOmvRGkAOUCvJ2ZjycZtH/918w87YZw1b+A3T18PiSgABBcSkwBUpaEPRQAgkuJKUDKkrCHAkBwKTEFSFkS9lAACC4lpgApS8IeCgDBpcQUIGVJ2EMBILiUmAKkLAl7KAAElxJTgJQlYQ8FgOBSYgqQsiTsoQAQXEpMAVKWhD0UAIJLiSlAypKwhwJAcCkxBUhZEvZQAAguJaYAKUvCHgoAwaXEFCBlSdhDASC4lJgCpCwJeygABJcSU4CUJWEPBYDgUmIKkLIk7KEAEFxKTAFSloQ9FACCS4kpQMqSsIcCQHApMQVIWRL2UAAILiX2DO72K4EnoMOWAAAAAElFTkSuQmCC'
-		var $closeIcon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAADDElEQVR4Xu2aMW4UURQE309JLRIC7oATIudEnIgIyTERMQkBN+AMFidACHEDjrBj+QhT0p+gu1Zytj3ari49J7PGTzWBVd3e8qMA5RIogAKUEyiv7wVQgHIC5fW9AApQTqC8vhdAAcoJlNf3AihAOYHy+l4ABSgnUF7fC6AA5QTK63sBFKCcQHl9L4AClBMor+8FUIByAuX1vQAKUE6gvL4XQAHKCZTX9wIoQDmB8vpeAAUoJ1Be3wugAOUEyut7ARSgnEB5fS+AApQTKK/vBVCAcgLl9b0AClBOoLy+F0ABygmU1/cCKEA5gfL6XgAFKCdQXv+qC3A3M+/KWZ+t/29m/p4Nnf3+VQJ8WGv9PPvjmr+/1nq83W6fdjNQgN2E4fPTBHg9M+8hi9bYn5n5vbv8VRdgdw+fDwkoAASXElOAlCVhDwWA4FJiCpCyJOyhABBcSkwBUpaEPRQAgkuJKUDKkrCHAkBwKTEFSFkS9lAACC4lpgApS8IeCgDBpcQUIGVJ2OMqAe7XWp/hb6yMHcfxY2a+7y5/lQC+EnZyybQ3gh7WWt9OMqj++nEcX2fmy24IV12A3T18PiSgABBcSkwBUpaEPRQAgkuJKUDKkrCHAkBwKTEFSFkS9lAACC4lpgApS8IeCgDBpcQUIGVJ2EMBILiUmAKkLAl7KAAElxJTgJQlYY+rBHg1M2/gb2yN/Z+Zl7+tn6sE8I2gkzOmvRGkAOUCvJ2ZjycZtH/918w87YZw1b+A3T18PiSgABBcSkwBUpaEPRQAgkuJKUDKkrCHAkBwKTEFSFkS9lAACC4lpgApS8IeCgDBpcQUIGVJ2EMBILiUmAKkLAl7KAAElxJTgJQlYQ8FgOBSYgqQsiTsoQAQXEpMAVKWhD0UAIJLiSlAypKwhwJAcCkxBUhZEvZQAAguJaYAKUvCHgoAwaXEFCBlSdhDASC4lJgCpCwJeygABJcSU4CUJWEPBYDgUmIKkLIk7KEAEFxKTAFSloQ9FACCS4kpQMqSsIcCQHApMQVIWRL2UAAILiX2DO72K4EnoMOWAAAAAElFTkSuQmCC'
+		var openIcon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAADDElEQVR4Xu2aMW4UURQE309JLRIC7oATIudEnIgIyTERMQkBN+AMFidACHEDjrBj+QhT0p+gu1Zytj3ari49J7PGTzWBVd3e8qMA5RIogAKUEyiv7wVQgHIC5fW9AApQTqC8vhdAAcoJlNf3AihAOYHy+l4ABSgnUF7fC6AA5QTK63sBFKCcQHl9L4AClBMor+8FUIByAuX1vQAKUE6gvL4XQAHKCZTX9wIoQDmB8vpeAAUoJ1Be3wugAOUEyut7ARSgnEB5fS+AApQTKK/vBVCAcgLl9b0AClBOoLy+F0ABygmU1/cCKEA5gfL6XgAFKCdQXv+qC3A3M+/KWZ+t/29m/p4Nnf3+VQJ8WGv9PPvjmr+/1nq83W6fdjNQgN2E4fPTBHg9M+8hi9bYn5n5vbv8VRdgdw+fDwkoAASXElOAlCVhDwWA4FJiCpCyJOyhABBcSkwBUpaEPRQAgkuJKUDKkrCHAkBwKTEFSFkS9lAACC4lpgApS8IeCgDBpcQUIGVJ2OMqAe7XWp/hb6yMHcfxY2a+7y5/lQC+EnZyybQ3gh7WWt9OMqj++nEcX2fmy24IV12A3T18PiSgABBcSkwBUpaEPRQAgkuJKUDKkrCHAkBwKTEFSFkS9lAACC4lpgApS8IeCgDBpcQUIGVJ2EMBILiUmAKkLAl7KAAElxJTgJQlYY+rBHg1M2/gb2yN/Z+Zl7+tn6sE8I2gkzOmvRGkAOUCvJ2ZjycZtH/918w87YZw1b+A3T18PiSgABBcSkwBUpaEPRQAgkuJKUDKkrCHAkBwKTEFSFkS9lAACC4lpgApS8IeCgDBpcQUIGVJ2EMBILiUmAKkLAl7KAAElxJTgJQlYQ8FgOBSYgqQsiTsoQAQXEpMAVKWhD0UAIJLiSlAypKwhwJAcCkxBUhZEvZQAAguJaYAKUvCHgoAwaXEFCBlSdhDASC4lJgCpCwJeygABJcSU4CUJWEPBYDgUmIKkLIk7KEAEFxKTAFSloQ9FACCS4kpQMqSsIcCQHApMQVIWRL2UAAILiX2DO72K4EnoMOWAAAAAElFTkSuQmCC'
+		var closeIcon = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAADDElEQVR4Xu2aMW4UURQE309JLRIC7oATIudEnIgIyTERMQkBN+AMFidACHEDjrBj+QhT0p+gu1Zytj3ari49J7PGTzWBVd3e8qMA5RIogAKUEyiv7wVQgHIC5fW9AApQTqC8vhdAAcoJlNf3AihAOYHy+l4ABSgnUF7fC6AA5QTK63sBFKCcQHl9L4AClBMor+8FUIByAuX1vQAKUE6gvL4XQAHKCZTX9wIoQDmB8vpeAAUoJ1Be3wugAOUEyut7ARSgnEB5fS+AApQTKK/vBVCAcgLl9b0AClBOoLy+F0ABygmU1/cCKEA5gfL6XgAFKCdQXv+qC3A3M+/KWZ+t/29m/p4Nnf3+VQJ8WGv9PPvjmr+/1nq83W6fdjNQgN2E4fPTBHg9M+8hi9bYn5n5vbv8VRdgdw+fDwkoAASXElOAlCVhDwWA4FJiCpCyJOyhABBcSkwBUpaEPRQAgkuJKUDKkrCHAkBwKTEFSFkS9lAACC4lpgApS8IeCgDBpcQUIGVJ2OMqAe7XWp/hb6yMHcfxY2a+7y5/lQC+EnZyybQ3gh7WWt9OMqj++nEcX2fmy24IV12A3T18PiSgABBcSkwBUpaEPRQAgkuJKUDKkrCHAkBwKTEFSFkS9lAACC4lpgApS8IeCgDBpcQUIGVJ2EMBILiUmAKkLAl7KAAElxJTgJQlYY+rBHg1M2/gb2yN/Z+Zl7+tn6sE8I2gkzOmvRGkAOUCvJ2ZjycZtH/918w87YZw1b+A3T18PiSgABBcSkwBUpaEPRQAgkuJKUDKkrCHAkBwKTEFSFkS9lAACC4lpgApS8IeCgDBpcQUIGVJ2EMBILiUmAKkLAl7KAAElxJTgJQlYQ8FgOBSYgqQsiTsoQAQXEpMAVKWhD0UAIJLiSlAypKwhwJAcCkxBUhZEvZQAAguJaYAKUvCHgoAwaXEFCBlSdhDASC4lJgCpCwJeygABJcSU4CUJWEPBYDgUmIKkLIk7KEAEFxKTAFSloQ9FACCS4kpQMqSsIcCQHApMQVIWRL2UAAILiX2DO72K4EnoMOWAAAAAElFTkSuQmCC'
 
 		/* @note: icon from https://www.iconfinder.com/icons/296823/list_menu_icon#size=128 */
 
 		if($handle.attr('open-icon') !== undefined && $handle.attr('open-icon') !== 'false') {
-			$openIcon = $handle.attr('open-icon');
+			openIcon = $handle.attr('open-icon');
 		}
 
 		if($handle.attr('close-icon') !== undefined && $handle.attr('close-icon') !== 'false') {
-			$closeIcon = $handle.attr('close-icon');
+			closeIcon = $handle.attr('close-icon');
 		} 
 
 		//Add url to the uri
 
-		$openIcon = 'background-image: url(' + $openIcon + ');';
-
-		$closeIcon = 'background-image: url(' + $closeIcon + ');';
+		openIcon = "url('" + openIcon + "')";
+		closeIcon = "url('" + closeIcon + "')";
 
 		//Add other parameters to 
 
@@ -104,9 +103,10 @@
 		//Initialise the handle on Load based on state
 
 		if(isOpen())
-			$handle.attr('style', $closeIcon);
+			$handle[0].style.backgroundImage = closeIcon;
+
 		if(isClosed())
-			$handle.attr('style', $openIcon);
+			$handle[0].style.backgroundImage = openIcon;
 
 
 		// Open the drawer
@@ -125,9 +125,7 @@
 				}, 400);
 
 				//Change the handle icon to point the direction of closing
-
-				$handle.attr('style', $closeIcon);
-
+				$handle[0].style.backgroundImage = closeIcon;
 				return q.promise;
 			}
 			q.resolve();
@@ -150,7 +148,7 @@
 				}, 400);
 
 				//Change the handle icon to point the direction of opening
-				$handle.attr('style', $openIcon);
+				$handle[0].style.backgroundImage = openIcon;
 				return q.promise;
 			}
 			q.resolve();
